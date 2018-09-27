@@ -12,6 +12,7 @@
 		579C929E215CB302009271CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579C929C215CB302009271CE /* Main.storyboard */; };
 		579C92A0215CB303009271CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 579C929F215CB303009271CE /* Assets.xcassets */; };
 		579C92A3215CB303009271CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579C92A1215CB303009271CE /* LaunchScreen.storyboard */; };
+		579C92AD215CB519009271CE /* calu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 579C92AC215CB519009271CE /* calu.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		579C929F215CB303009271CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		579C92A2215CB303009271CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		579C92A4215CB303009271CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		579C92AC215CB519009271CE /* calu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = calu.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				579C929C215CB302009271CE /* Main.storyboard */,
 				579C929F215CB303009271CE /* Assets.xcassets */,
 				579C92A1215CB303009271CE /* LaunchScreen.storyboard */,
+				579C92AC215CB519009271CE /* calu.jpg */,
 				579C92A4215CB303009271CE /* Info.plist */,
 			);
 			path = Calculator;
@@ -122,6 +125,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				579C92AD215CB519009271CE /* calu.jpg in Resources */,
 				579C92A3215CB303009271CE /* LaunchScreen.storyboard in Resources */,
 				579C92A0215CB303009271CE /* Assets.xcassets in Resources */,
 				579C929E215CB302009271CE /* Main.storyboard in Resources */,
