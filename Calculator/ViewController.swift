@@ -61,11 +61,11 @@ class ViewController: UIViewController {
     }
     else if sender.tag == 18
         {
-            if operation == 14
+            if operation == 14 //Divide
             {
             label.text = String(previousnumber / numberOnScreen)
             }
-       else if operation == 15
+       else if operation == 15 //Multiply
         {
            label.text =  String(previousnumber * numberOnScreen)
         }
