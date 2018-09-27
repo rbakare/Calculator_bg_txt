@@ -69,11 +69,11 @@ class ViewController: UIViewController {
         {
            label.text =  String(previousnumber * numberOnScreen)
         }
-    else if operation == 16
+    else if operation == 16 //Minus
     {
        label.text =  String(previousnumber - numberOnScreen)
         }
-    else if operation == 17
+    else if operation == 17  //Plus
     {
         label.text = String(previousnumber + numberOnScreen)
         }
