@@ -13,21 +13,21 @@ import UIKit
 class ViewController: UIViewController {
     
     
-    @IBOutlet var TextFields: [UIButton]!
-    @IBOutlet var turnLight: [UIButton]!
+    @IBOutlet var Textcolor: [UIButton]!
+    @IBOutlet var backgroundcolor: [UIButton]!
     
     
-    // change  bacground of view
+    // changes  the bacground of view
     
     @IBAction func pushAdd(_ sender: Any) {
-        let alertController =  UIAlertController(title: "Choose your style", message:"", preferredStyle: .alert)
+        let alertController =  UIAlertController(title: "Choose your background color", message:"", preferredStyle: .alert)
         let alertAction1 = UIAlertAction(title: "Dark", style: .default) { (alert) in
             
             UIView.animate(withDuration: 1, animations: {
-                //self.turnLight.backgroundColor = UIColor.gray
+               // self.turnLight.backgroundColor = UIColor.gray
                 self.view.backgroundColor = UIColor.black
                 // background for buttons
-                for key in self.turnLight {
+                for key in self.backgroundcolor {
                     key.backgroundColor = UIColor.gray
                 }
                 
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         let alertAction2 = UIAlertAction(title: "Light", style: .default) { (alert) in
             UIView.animate(withDuration: 1, animations: {
                 // change background for top numbers
-                for key in self.turnLight {
+                for key in self.backgroundcolor {
                     key.backgroundColor = UIColor.white
                 }
                 
@@ -56,14 +56,14 @@ class ViewController: UIViewController {
     
     // Edit Text
     
-    @IBAction func EditText(_ sender: Any) {
-        let alertController1 =  UIAlertController(title: "Choose your style", message:"", preferredStyle: .alert)
+    @IBAction func textColor(_ sender: Any) {
+        let alertController1 =  UIAlertController(title: "Choose your text color", message:"", preferredStyle: .alert)
         let alertAction3 = UIAlertAction(title: "Black", style: .default) { (alert) in
             
             UIView.animate(withDuration: 1, animations: {
-                
+              
                 // textChange
-                for aTextField in self.TextFields{
+                for aTextField in self.Textcolor{
                     aTextField.setTitleColor(UIColor.black, for: .normal)
                 }
             }, completion: nil)
@@ -72,7 +72,7 @@ class ViewController: UIViewController {
         let alertAction4 = UIAlertAction(title: "Blue", style: .default) { (alert) in
             UIView.animate(withDuration: 1, animations: {
                 // textChange
-                for aTextField in self.TextFields{
+                for aTextField in self.Textcolor{
                     aTextField.setTitleColor(UIColor.blue, for: .normal)
                 }
             }, completion: nil)

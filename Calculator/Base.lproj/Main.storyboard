@@ -200,13 +200,6 @@
                                     <action selector="decimalButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="74Y-KJ-Xeh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="io9-uD-b05">
-                                <rect key="frame" x="15" y="94" width="384" height="123"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="75"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcq-NG-nyz">
                                 <rect key="frame" x="17" y="631" width="188" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -264,7 +257,7 @@
                                     <navigationItem title="Title" id="rWN-gt-C34">
                                         <barButtonItem key="leftBarButtonItem" title="Text color" id="ecN-7v-m3M">
                                             <connections>
-                                                <action selector="EditText:" destination="BYZ-38-t0r" id="aoF-MW-BwU"/>
+                                                <action selector="textColor:" destination="BYZ-38-t0r" id="E1B-PT-DJT"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="BackgroundColor" id="mWq-yf-d5b">
@@ -275,33 +268,57 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="io9-uD-b05">
+                                <rect key="frame" x="17" y="106" width="384" height="123"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="75"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.039215686270000001" green="0.078431372550000003" blue="0.074509803920000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="ResultLabel" destination="io9-uD-b05" id="o1d-fN-D7W"/>
-                        <outletCollection property="TextFields" destination="ggv-K7-0Gq" collectionClass="NSMutableArray" id="uBa-xf-1ym"/>
-                        <outletCollection property="TextFields" destination="g0W-Gu-4gj" collectionClass="NSMutableArray" id="TPQ-JG-vcr"/>
-                        <outletCollection property="TextFields" destination="fU9-dx-zv2" collectionClass="NSMutableArray" id="BhT-B5-kRy"/>
-                        <outletCollection property="TextFields" destination="chB-Su-hgB" collectionClass="NSMutableArray" id="bad-f7-jEM"/>
-                        <outletCollection property="TextFields" destination="8oh-58-eph" collectionClass="NSMutableArray" id="jC7-Cr-jQr"/>
-                        <outletCollection property="TextFields" destination="wP3-YP-oNq" collectionClass="NSMutableArray" id="1it-w5-URM"/>
-                        <outletCollection property="TextFields" destination="01n-JA-zsa" collectionClass="NSMutableArray" id="pq7-SR-V18"/>
-                        <outletCollection property="TextFields" destination="6hM-bH-a0l" collectionClass="NSMutableArray" id="c0A-hZ-bk5"/>
-                        <outletCollection property="TextFields" destination="6cD-10-QgL" collectionClass="NSMutableArray" id="BIm-bK-l3Y"/>
-                        <outletCollection property="TextFields" destination="3Cp-lT-KoP" collectionClass="NSMutableArray" id="tHk-Zm-zrY"/>
-                        <outletCollection property="TextFields" destination="pMZ-Sf-MtO" collectionClass="NSMutableArray" id="SBg-G6-WzC"/>
-                        <outletCollection property="TextFields" destination="DF5-TM-1OA" collectionClass="NSMutableArray" id="FZ0-Al-3Gg"/>
-                        <outletCollection property="TextFields" destination="k7L-vu-qCO" collectionClass="NSMutableArray" id="VOU-fl-gfl"/>
-                        <outletCollection property="TextFields" destination="7nt-2B-dGy" collectionClass="NSMutableArray" id="8nL-yC-PtX"/>
-                        <outletCollection property="TextFields" destination="bcq-NG-nyz" collectionClass="NSMutableArray" id="SME-Az-jG5"/>
-                        <outletCollection property="TextFields" destination="KBF-AY-KMO" collectionClass="NSMutableArray" id="F8K-9W-unp"/>
-                        <outletCollection property="TextFields" destination="cet-Qn-nJL" collectionClass="NSMutableArray" id="ogO-S7-RX0"/>
-                        <outletCollection property="TextFields" destination="4d5-2e-cYN" collectionClass="NSMutableArray" id="qsu-7r-Ibp"/>
-                        <outletCollection property="TextFields" destination="dgK-Ip-33E" collectionClass="NSMutableArray" id="RFk-ZG-d0U"/>
-                        <outletCollection property="turnLight" destination="dgK-Ip-33E" collectionClass="NSMutableArray" id="e2t-S0-8fd"/>
-                        <outletCollection property="turnLight" destination="DF5-TM-1OA" collectionClass="NSMutableArray" id="Wbx-08-KUH"/>
+                        <outlet property="ResultLabel" destination="io9-uD-b05" id="edl-Mo-Q9t"/>
+                        <outletCollection property="Textcolor" destination="dgK-Ip-33E" collectionClass="NSMutableArray" id="hcQ-6d-112"/>
+                        <outletCollection property="Textcolor" destination="pMZ-Sf-MtO" collectionClass="NSMutableArray" id="SiS-HT-YOg"/>
+                        <outletCollection property="Textcolor" destination="3Cp-lT-KoP" collectionClass="NSMutableArray" id="jfv-qt-PXy"/>
+                        <outletCollection property="Textcolor" destination="ggv-K7-0Gq" collectionClass="NSMutableArray" id="nmi-rN-R80"/>
+                        <outletCollection property="Textcolor" destination="6cD-10-QgL" collectionClass="NSMutableArray" id="nGJ-TP-mdu"/>
+                        <outletCollection property="Textcolor" destination="DF5-TM-1OA" collectionClass="NSMutableArray" id="VXn-qA-mKb"/>
+                        <outletCollection property="Textcolor" destination="4d5-2e-cYN" collectionClass="NSMutableArray" id="cwB-l3-ZbI"/>
+                        <outletCollection property="Textcolor" destination="cet-Qn-nJL" collectionClass="NSMutableArray" id="Oct-zN-JYv"/>
+                        <outletCollection property="Textcolor" destination="k7L-vu-qCO" collectionClass="NSMutableArray" id="sYM-IJ-h6H"/>
+                        <outletCollection property="Textcolor" destination="6hM-bH-a0l" collectionClass="NSMutableArray" id="b8D-jn-4Zw"/>
+                        <outletCollection property="Textcolor" destination="fU9-dx-zv2" collectionClass="NSMutableArray" id="3jM-NR-Uom"/>
+                        <outletCollection property="Textcolor" destination="KBF-AY-KMO" collectionClass="NSMutableArray" id="J03-Jr-2Nx"/>
+                        <outletCollection property="Textcolor" destination="7nt-2B-dGy" collectionClass="NSMutableArray" id="jrW-Hi-ulp"/>
+                        <outletCollection property="Textcolor" destination="01n-JA-zsa" collectionClass="NSMutableArray" id="Ge7-2O-9ri"/>
+                        <outletCollection property="Textcolor" destination="chB-Su-hgB" collectionClass="NSMutableArray" id="ocV-64-UvN"/>
+                        <outletCollection property="Textcolor" destination="g0W-Gu-4gj" collectionClass="NSMutableArray" id="cv5-zz-PLr"/>
+                        <outletCollection property="Textcolor" destination="bcq-NG-nyz" collectionClass="NSMutableArray" id="lxK-23-wR8"/>
+                        <outletCollection property="Textcolor" destination="wP3-YP-oNq" collectionClass="NSMutableArray" id="3Zv-7Q-6hU"/>
+                        <outletCollection property="Textcolor" destination="8oh-58-eph" collectionClass="NSMutableArray" id="Ggy-04-kVR"/>
+                        <outletCollection property="backgroundcolor" destination="dgK-Ip-33E" collectionClass="NSMutableArray" id="xJb-Lc-6eo"/>
+                        <outletCollection property="backgroundcolor" destination="pMZ-Sf-MtO" collectionClass="NSMutableArray" id="Vfb-Rq-t8z"/>
+                        <outletCollection property="backgroundcolor" destination="3Cp-lT-KoP" collectionClass="NSMutableArray" id="zLc-pp-UEN"/>
+                        <outletCollection property="backgroundcolor" destination="ggv-K7-0Gq" collectionClass="NSMutableArray" id="m7S-US-pL7"/>
+                        <outletCollection property="backgroundcolor" destination="4d5-2e-cYN" collectionClass="NSMutableArray" id="JC4-vi-ey8"/>
+                        <outletCollection property="backgroundcolor" destination="DF5-TM-1OA" collectionClass="NSMutableArray" id="RFW-M1-Fml"/>
+                        <outletCollection property="backgroundcolor" destination="6cD-10-QgL" collectionClass="NSMutableArray" id="mFK-Hf-t1k"/>
+                        <outletCollection property="backgroundcolor" destination="g0W-Gu-4gj" collectionClass="NSMutableArray" id="7gx-EA-eY4"/>
+                        <outletCollection property="backgroundcolor" destination="cet-Qn-nJL" collectionClass="NSMutableArray" id="ylx-sw-51O"/>
+                        <outletCollection property="backgroundcolor" destination="k7L-vu-qCO" collectionClass="NSMutableArray" id="4Bx-ad-cdR"/>
+                        <outletCollection property="backgroundcolor" destination="6hM-bH-a0l" collectionClass="NSMutableArray" id="9k4-eV-JZT"/>
+                        <outletCollection property="backgroundcolor" destination="fU9-dx-zv2" collectionClass="NSMutableArray" id="lJW-a9-GNB"/>
+                        <outletCollection property="backgroundcolor" destination="KBF-AY-KMO" collectionClass="NSMutableArray" id="NYX-Yx-MjH"/>
+                        <outletCollection property="backgroundcolor" destination="7nt-2B-dGy" collectionClass="NSMutableArray" id="7L2-ga-0Du"/>
+                        <outletCollection property="backgroundcolor" destination="01n-JA-zsa" collectionClass="NSMutableArray" id="pir-nX-qGA"/>
+                        <outletCollection property="backgroundcolor" destination="chB-Su-hgB" collectionClass="NSMutableArray" id="sey-Hi-qiy"/>
+                        <outletCollection property="backgroundcolor" destination="bcq-NG-nyz" collectionClass="NSMutableArray" id="lHs-iB-AKc"/>
+                        <outletCollection property="backgroundcolor" destination="wP3-YP-oNq" collectionClass="NSMutableArray" id="los-eI-2Vl"/>
+                        <outletCollection property="backgroundcolor" destination="8oh-58-eph" collectionClass="NSMutableArray" id="Bnd-UQ-BDy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
