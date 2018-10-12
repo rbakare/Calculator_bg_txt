@@ -11,8 +11,84 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet var TextFields: [UIButton]!
+    @IBOutlet var turnLight: [UIButton]!
+    
+    
+    // change  bacground of view
+    
+    @IBAction func pushAdd(_ sender: Any) {
+        let alertController =  UIAlertController(title: "Choose your style", message:"", preferredStyle: .alert)
+        let alertAction1 = UIAlertAction(title: "Dark", style: .default) { (alert) in
+            
+            UIView.animate(withDuration: 1, animations: {
+                //self.turnLight.backgroundColor = UIColor.gray
+                self.view.backgroundColor = UIColor.black
+                // background for buttons
+                for key in self.turnLight {
+                    key.backgroundColor = UIColor.gray
+                }
+                
+            }, completion: nil)
+        }
+        
+        let alertAction2 = UIAlertAction(title: "Light", style: .default) { (alert) in
+            UIView.animate(withDuration: 1, animations: {
+                // change background for top numbers
+                for key in self.turnLight {
+                    key.backgroundColor = UIColor.white
+                }
+                
+                self.view.backgroundColor = UIColor.gray
+            }, completion: nil)
+        }
+        
+        alertController.addAction(alertAction1)
+        alertController.addAction(alertAction2)
+        // function
+        present(alertController, animated: true, completion: nil)
+        
+    }
+    
+    
+    
+    // Edit Text
+    
+    @IBAction func EditText(_ sender: Any) {
+        let alertController1 =  UIAlertController(title: "Choose your style", message:"", preferredStyle: .alert)
+        let alertAction3 = UIAlertAction(title: "Black", style: .default) { (alert) in
+            
+            UIView.animate(withDuration: 1, animations: {
+                
+                // textChange
+                for aTextField in self.TextFields{
+                    aTextField.setTitleColor(UIColor.black, for: .normal)
+                }
+            }, completion: nil)
+        }
+        
+        let alertAction4 = UIAlertAction(title: "Blue", style: .default) { (alert) in
+            UIView.animate(withDuration: 1, animations: {
+                // textChange
+                for aTextField in self.TextFields{
+                    aTextField.setTitleColor(UIColor.blue, for: .normal)
+                }
+            }, completion: nil)
+        }
+        
+        alertController1.addAction(alertAction3)
+        alertController1.addAction(alertAction4)
+        // function
+        present(alertController1, animated: true, completion: nil)
+        
+    }
    
-     override func viewDidLoad() {
+    
+    
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -33,7 +109,7 @@ class ViewController: UIViewController {
     
     
     //  created varible which  changes text_string on double
-    var currentInput : Double{
+    var presentInput : Double{
         get {
             return Double(ResultLabel.text!)!
         }
@@ -65,21 +141,21 @@ class ViewController: UIViewController {
     @IBAction func twoOperandsSignPressed(_ sender: UIButton) {
         // this operation sign gets sign + or -
         operationSign = sender.currentTitle!
-        firstOperation = currentInput
+        firstOperation = presentInput
         stillTyping = false
         decimalpoint = false
     }
     
     //  writes the function for this case
     func operateWithTwoOperands ( operation: (Double, Double) -> Double) {
-        currentInput = operation(firstOperation,secondOperation)
+        presentInput = operation(firstOperation,secondOperation)
         stillTyping = false}
     
     
     // creates action which when pressed  saves operand .
     @IBAction func equalitySignPressed(_ sender: UIButton) {
         if stillTyping  {
-            secondOperation = currentInput}
+            secondOperation = presentInput}
         
         decimalpoint = false
         // 11 making different cases
@@ -111,7 +187,7 @@ class ViewController: UIViewController {
     @IBAction func clearButtonPressed(_ sender: UIButton) {
         firstOperation = 0
         secondOperation = 0
-        currentInput = 0
+        presentInput = 0
         ResultLabel.text = "0"
         stillTyping = false
         operationSign = ""
@@ -119,14 +195,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func plusMinusButtonPressed(_ sender: UIButton) {
-        currentInput = -currentInput
+        presentInput = -presentInput
     }
     
     @IBAction func percentageButtonPressed(_ sender: UIButton) {
         if firstOperation == 0 {
-            currentInput = currentInput/100
+            presentInput = presentInput/100
         } else {
-            secondOperation = firstOperation * currentInput/100
+            secondOperation = firstOperation * presentInput/100
             stillTyping = false
         }
     }

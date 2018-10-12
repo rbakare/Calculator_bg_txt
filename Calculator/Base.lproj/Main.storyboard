@@ -257,12 +257,51 @@
                                     <action selector="numberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PLj-xM-DFx"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3d8-FS-R8E">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="rWN-gt-C34">
+                                        <barButtonItem key="leftBarButtonItem" title="Text color" id="ecN-7v-m3M">
+                                            <connections>
+                                                <action selector="EditText:" destination="BYZ-38-t0r" id="aoF-MW-BwU"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="BackgroundColor" id="mWq-yf-d5b">
+                                            <connections>
+                                                <action selector="pushAdd:" destination="BYZ-38-t0r" id="wFv-XW-Pss"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.039215686270000001" green="0.078431372550000003" blue="0.074509803920000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="ResultLabel" destination="io9-uD-b05" id="o1d-fN-D7W"/>
+                        <outletCollection property="TextFields" destination="ggv-K7-0Gq" collectionClass="NSMutableArray" id="uBa-xf-1ym"/>
+                        <outletCollection property="TextFields" destination="g0W-Gu-4gj" collectionClass="NSMutableArray" id="TPQ-JG-vcr"/>
+                        <outletCollection property="TextFields" destination="fU9-dx-zv2" collectionClass="NSMutableArray" id="BhT-B5-kRy"/>
+                        <outletCollection property="TextFields" destination="chB-Su-hgB" collectionClass="NSMutableArray" id="bad-f7-jEM"/>
+                        <outletCollection property="TextFields" destination="8oh-58-eph" collectionClass="NSMutableArray" id="jC7-Cr-jQr"/>
+                        <outletCollection property="TextFields" destination="wP3-YP-oNq" collectionClass="NSMutableArray" id="1it-w5-URM"/>
+                        <outletCollection property="TextFields" destination="01n-JA-zsa" collectionClass="NSMutableArray" id="pq7-SR-V18"/>
+                        <outletCollection property="TextFields" destination="6hM-bH-a0l" collectionClass="NSMutableArray" id="c0A-hZ-bk5"/>
+                        <outletCollection property="TextFields" destination="6cD-10-QgL" collectionClass="NSMutableArray" id="BIm-bK-l3Y"/>
+                        <outletCollection property="TextFields" destination="3Cp-lT-KoP" collectionClass="NSMutableArray" id="tHk-Zm-zrY"/>
+                        <outletCollection property="TextFields" destination="pMZ-Sf-MtO" collectionClass="NSMutableArray" id="SBg-G6-WzC"/>
+                        <outletCollection property="TextFields" destination="DF5-TM-1OA" collectionClass="NSMutableArray" id="FZ0-Al-3Gg"/>
+                        <outletCollection property="TextFields" destination="k7L-vu-qCO" collectionClass="NSMutableArray" id="VOU-fl-gfl"/>
+                        <outletCollection property="TextFields" destination="7nt-2B-dGy" collectionClass="NSMutableArray" id="8nL-yC-PtX"/>
+                        <outletCollection property="TextFields" destination="bcq-NG-nyz" collectionClass="NSMutableArray" id="SME-Az-jG5"/>
+                        <outletCollection property="TextFields" destination="KBF-AY-KMO" collectionClass="NSMutableArray" id="F8K-9W-unp"/>
+                        <outletCollection property="TextFields" destination="cet-Qn-nJL" collectionClass="NSMutableArray" id="ogO-S7-RX0"/>
+                        <outletCollection property="TextFields" destination="4d5-2e-cYN" collectionClass="NSMutableArray" id="qsu-7r-Ibp"/>
+                        <outletCollection property="TextFields" destination="dgK-Ip-33E" collectionClass="NSMutableArray" id="RFk-ZG-d0U"/>
+                        <outletCollection property="turnLight" destination="dgK-Ip-33E" collectionClass="NSMutableArray" id="e2t-S0-8fd"/>
+                        <outletCollection property="turnLight" destination="DF5-TM-1OA" collectionClass="NSMutableArray" id="Wbx-08-KUH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
